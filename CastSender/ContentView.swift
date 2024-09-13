@@ -8,14 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var viewModel = ViewModel()
+
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            if viewModel.isLoading {
+                ProgressView()
+            } else if let data = viewModel.data {
+                Text("Data fetched - \(data)")
+//                List(data) { broadcast in
+//                    VStack(alignment: .leading) {
+//                        Text(broadcast.channel_name)
+//                            .font(.headline)
+//                    }
+//                }
+            } else {
+                Text("Error fetching data")
+            }
         }
-        .padding()
     }
 }
 
