@@ -15,13 +15,12 @@ struct ContentView: View {
             if viewModel.isLoading {
                 ProgressView()
             } else if let data = viewModel.data {
-                Text("Data fetched - \(data)")
-//                List(data) { broadcast in
-//                    VStack(alignment: .leading) {
-//                        Text(broadcast.channel_name)
-//                            .font(.headline)
-//                    }
-//                }
+                List(data) { broadcast in
+                    VStack(alignment: .leading) {
+                        Text("Ch\(broadcast.channel_name)")
+                            .font(.headline)
+                    }
+                }
             } else {
                 Text("Error fetching data")
             }

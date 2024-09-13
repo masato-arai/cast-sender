@@ -7,10 +7,11 @@
 
 import Foundation
 
-struct Broadcast: Codable {
+struct Broadcast: Identifiable, Codable {
+    let id: UUID = UUID()
     let channel_name: String
 }
 
-struct LiveData: Codable {
+struct LiveData: Decodable {
     let results: [Broadcast]
 }
