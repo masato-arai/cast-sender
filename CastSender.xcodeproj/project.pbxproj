@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B6AA3F4E183F03EC708922C /* Pods_CastSender.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942A0C8101781CC845EBF3E3 /* Pods_CastSender.framework */; };
 		E0CE2C2C2C94E26B00DDC5AE /* CastSenderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CE2C2B2C94E26B00DDC5AE /* CastSenderApp.swift */; };
 		E0CE2C2E2C94E26B00DDC5AE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CE2C2D2C94E26B00DDC5AE /* ContentView.swift */; };
 		E0CE2C302C94E26C00DDC5AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0CE2C2F2C94E26C00DDC5AE /* Assets.xcassets */; };
@@ -18,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7CCD9686D2C96EA338B5C8F5 /* Pods-CastSender.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CastSender.release.xcconfig"; path = "Target Support Files/Pods-CastSender/Pods-CastSender.release.xcconfig"; sourceTree = "<group>"; };
+		942A0C8101781CC845EBF3E3 /* Pods_CastSender.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CastSender.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0C88C8B2CD90F42E0FDC6E6 /* Pods-CastSender.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CastSender.debug.xcconfig"; path = "Target Support Files/Pods-CastSender/Pods-CastSender.debug.xcconfig"; sourceTree = "<group>"; };
 		E0CE2C282C94E26B00DDC5AE /* CastSender.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CastSender.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0CE2C2B2C94E26B00DDC5AE /* CastSenderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastSenderApp.swift; sourceTree = "<group>"; };
 		E0CE2C2D2C94E26B00DDC5AE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -34,16 +38,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B6AA3F4E183F03EC708922C /* Pods_CastSender.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		633AB5CE2ABD24470820FA19 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				942A0C8101781CC845EBF3E3 /* Pods_CastSender.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		84C05F71426F8489E4C5484E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C0C88C8B2CD90F42E0FDC6E6 /* Pods-CastSender.debug.xcconfig */,
+				7CCD9686D2C96EA338B5C8F5 /* Pods-CastSender.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		E0CE2C1F2C94E26B00DDC5AE = {
 			isa = PBXGroup;
 			children = (
 				E0CE2C2A2C94E26B00DDC5AE /* CastSender */,
+				633AB5CE2ABD24470820FA19 /* Frameworks */,
+				84C05F71426F8489E4C5484E /* Pods */,
 				E0CE2C292C94E26B00DDC5AE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -110,9 +134,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E0CE2C362C94E26C00DDC5AE /* Build configuration list for PBXNativeTarget "CastSender" */;
 			buildPhases = (
+				1FBE10BB0C80988976E4AB17 /* [CP] Check Pods Manifest.lock */,
 				E0CE2C242C94E26B00DDC5AE /* Sources */,
 				E0CE2C252C94E26B00DDC5AE /* Frameworks */,
 				E0CE2C262C94E26B00DDC5AE /* Resources */,
+				F9C2EB36E1F3B177D2905EF3 /* [CP] Embed Pods Frameworks */,
+				1A97F0E1D5B260EA4F312B6E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,6 +194,65 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1A97F0E1D5B260EA4F312B6E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CastSender/Pods-CastSender-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CastSender/Pods-CastSender-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CastSender/Pods-CastSender-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1FBE10BB0C80988976E4AB17 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CastSender-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F9C2EB36E1F3B177D2905EF3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CastSender/Pods-CastSender-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CastSender/Pods-CastSender-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CastSender/Pods-CastSender-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E0CE2C242C94E26B00DDC5AE /* Sources */ = {
@@ -306,6 +392,7 @@
 		};
 		E0CE2C372C94E26C00DDC5AE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0C88C8B2CD90F42E0FDC6E6 /* Pods-CastSender.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -335,6 +422,7 @@
 		};
 		E0CE2C382C94E26C00DDC5AE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CCD9686D2C96EA338B5C8F5 /* Pods-CastSender.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
