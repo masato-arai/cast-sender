@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AVFoundation
 
 struct ContentView: View {
     @StateObject var viewModel = ViewModel()
@@ -15,10 +16,13 @@ struct ContentView: View {
             if viewModel.isLoading {
                 ProgressView()
             } else if let data = viewModel.data {
-                List(data) { broadcast in
-                    VStack(alignment: .leading) {
-                        Text("Ch\(broadcast.channel_name)")
-                            .font(.headline)
+                VStack {
+                    if let broadcast = data.first {
+                        HStack(spacing: 20) {
+                            Text("Ch\(broadcast.channel_name)")
+                                .font(.headline)
+                            StreamPlayerView()
+                        }
                     }
                 }
             } else {
