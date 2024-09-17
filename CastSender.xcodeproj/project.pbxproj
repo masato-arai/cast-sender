@@ -22,6 +22,7 @@
 		7CCD9686D2C96EA338B5C8F5 /* Pods-CastSender.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CastSender.release.xcconfig"; path = "Target Support Files/Pods-CastSender/Pods-CastSender.release.xcconfig"; sourceTree = "<group>"; };
 		942A0C8101781CC845EBF3E3 /* Pods_CastSender.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CastSender.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0C88C8B2CD90F42E0FDC6E6 /* Pods-CastSender.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CastSender.debug.xcconfig"; path = "Target Support Files/Pods-CastSender/Pods-CastSender.debug.xcconfig"; sourceTree = "<group>"; };
+		E06D5EC42C99CBDF008649BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		E0CE2C282C94E26B00DDC5AE /* CastSender.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CastSender.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0CE2C2B2C94E26B00DDC5AE /* CastSenderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastSenderApp.swift; sourceTree = "<group>"; };
 		E0CE2C2D2C94E26B00DDC5AE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -83,6 +84,7 @@
 		E0CE2C2A2C94E26B00DDC5AE /* CastSender */ = {
 			isa = PBXGroup;
 			children = (
+				E06D5EC42C99CBDF008649BE /* Info.plist */,
 				E0CE2C2F2C94E26C00DDC5AE /* Assets.xcassets */,
 				E0CE2C2B2C94E26B00DDC5AE /* CastSenderApp.swift */,
 				E0CE2C402C964C3E00DDC5AE /* Model */,
@@ -402,6 +404,8 @@
 				DEVELOPMENT_TEAM = FM7QXU526L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CastSender/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -432,6 +436,8 @@
 				DEVELOPMENT_TEAM = FM7QXU526L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CastSender/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
