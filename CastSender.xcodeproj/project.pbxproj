@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1B6AA3F4E183F03EC708922C /* Pods_CastSender.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942A0C8101781CC845EBF3E3 /* Pods_CastSender.framework */; };
+		E0B9C4F12CA1B03B008F1AFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B9C4F02CA1B03B008F1AFF /* AppDelegate.swift */; };
 		E0CE2C2C2C94E26B00DDC5AE /* CastSenderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CE2C2B2C94E26B00DDC5AE /* CastSenderApp.swift */; };
 		E0CE2C2E2C94E26B00DDC5AE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CE2C2D2C94E26B00DDC5AE /* ContentView.swift */; };
 		E0CE2C302C94E26C00DDC5AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0CE2C2F2C94E26C00DDC5AE /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 		942A0C8101781CC845EBF3E3 /* Pods_CastSender.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CastSender.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0C88C8B2CD90F42E0FDC6E6 /* Pods-CastSender.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CastSender.debug.xcconfig"; path = "Target Support Files/Pods-CastSender/Pods-CastSender.debug.xcconfig"; sourceTree = "<group>"; };
 		E06D5EC42C99CBDF008649BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		E0B9C4F02CA1B03B008F1AFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0CE2C282C94E26B00DDC5AE /* CastSender.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CastSender.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0CE2C2B2C94E26B00DDC5AE /* CastSenderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastSenderApp.swift; sourceTree = "<group>"; };
 		E0CE2C2D2C94E26B00DDC5AE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -84,13 +86,14 @@
 		E0CE2C2A2C94E26B00DDC5AE /* CastSender */ = {
 			isa = PBXGroup;
 			children = (
-				E06D5EC42C99CBDF008649BE /* Info.plist */,
 				E0CE2C2F2C94E26C00DDC5AE /* Assets.xcassets */,
 				E0CE2C2B2C94E26B00DDC5AE /* CastSenderApp.swift */,
+				E06D5EC42C99CBDF008649BE /* Info.plist */,
 				E0CE2C402C964C3E00DDC5AE /* Model */,
 				E0CE2C312C94E26C00DDC5AE /* Preview Content */,
 				E0CE2C392C94E29800DDC5AE /* ViewModel.swift */,
 				E0CE2C3F2C96491500DDC5AE /* Views */,
+				E0B9C4F02CA1B03B008F1AFF /* AppDelegate.swift */,
 			);
 			path = CastSender;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				E0CE2C3A2C94E29800DDC5AE /* ViewModel.swift in Sources */,
 				E0CE2C432C964D5200DDC5AE /* StreamPlayerView.swift in Sources */,
 				E0CE2C3E2C96438900DDC5AE /* StreamPlayer.swift in Sources */,
+				E0B9C4F12CA1B03B008F1AFF /* AppDelegate.swift in Sources */,
 				E0CE2C2C2C94E26B00DDC5AE /* CastSenderApp.swift in Sources */,
 				E0CE2C3C2C94E2B900DDC5AE /* BroadcastModel.swift in Sources */,
 			);
