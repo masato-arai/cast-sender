@@ -7,6 +7,7 @@
 
 import SwiftUI
 import AVFoundation
+import GoogleCast
 
 struct ContentView: View {
     @StateObject var viewModel = ViewModel()
@@ -16,7 +17,8 @@ struct ContentView: View {
             if viewModel.isLoading {
                 ProgressView()
             } else if let data = viewModel.data {
-                VStack {
+                HStack {
+
                     if let broadcast = data.first {
                         HStack(spacing: 20) {
                             Text("Ch\(broadcast.channel_name)")
@@ -24,6 +26,9 @@ struct ContentView: View {
                             StreamPlayerView()
                         }
                     }
+
+                    CastButtonView()
+                        .frame(width: 100)
                 }
             } else {
                 Text("Error fetching data")

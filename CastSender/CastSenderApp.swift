@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import GoogleCast
 
 @main
 struct CastSenderApp: App {
