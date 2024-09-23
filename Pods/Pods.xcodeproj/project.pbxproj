@@ -18,6 +18,7 @@
 				787691E96CFDB127F698C33603C29193 /* PBXTargetDependency */,
 			);
 			name = "google-cast-sdk";
+			productName = "google-cast-sdk";
 		};
 /* End PBXAggregateTarget section */
 
@@ -59,7 +60,7 @@
 		5F3940D6BA2384C14ED9F6BD66C65526 /* GPBSourceContext.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 940CEFDA11434B918AED27EB727816D6 /* GPBSourceContext.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		60CCB60EF5D95323E125AD5C1B8F48FF /* GPBEmpty.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D98A327EADB10C526FAF6A18AE5298 /* GPBEmpty.pbobjc.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		679782160F4B6F544C9B06FBC829A027 /* GPBSourceContext.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = 292FB1DD186665289B1FAB71CFEB85AD /* GPBSourceContext.pbobjc.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		693C150F0E5CF14B08EC14DA35DA5806 /* Protobuf-Protobuf_Privacy in Resources */ = {isa = PBXBuildFile; fileRef = F777222FFBEEB0CE4650EE8A00938A60 /* Protobuf-Protobuf_Privacy */; };
+		693C150F0E5CF14B08EC14DA35DA5806 /* Protobuf_Privacy.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F777222FFBEEB0CE4650EE8A00938A60 /* Protobuf_Privacy.bundle */; };
 		6BA04EE531B6C489CBF2B0D5B1FFA170 /* GPBUnknownFields+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7A5E3174B792586CAF112AF66AF127 /* GPBUnknownFields+Additions.swift */; };
 		6F884865C5877C79AA85A1DD3105F443 /* GPBMessage_PackagePrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 703E51BB39A28A4879E817E1DD6BA1F1 /* GPBMessage_PackagePrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		70BC77DA48939B329804449B286ADE84 /* GPBExtensionInternals.m in Sources */ = {isa = PBXBuildFile; fileRef = 57EC4E37DDEE65F6588B6B746E3B28BE /* GPBExtensionInternals.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -193,7 +194,7 @@
 		73C3F168295A7DD079C2462E8FD34763 /* Duration.pbobjc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Duration.pbobjc.h; path = objectivec/google/protobuf/Duration.pbobjc.h; sourceTree = "<group>"; };
 		79DC7A6130200D47C6AADD38E3B22DCC /* Protobuf.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Protobuf.debug.xcconfig; sourceTree = "<group>"; };
 		7B518E76AC1586D8E0E0F1AA09F04B1D /* GPBFieldMask.pbobjc.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GPBFieldMask.pbobjc.m; path = objectivec/GPBFieldMask.pbobjc.m; sourceTree = "<group>"; };
-		7BEB94E3574F9A9F47BA6C2CEE0DADBC /* GoogleCast.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = GoogleCast.xcframework; sourceTree = "<group>"; };
+		7BEB94E3574F9A9F47BA6C2CEE0DADBC /* GoogleCast.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; path = GoogleCast.xcframework; sourceTree = "<group>"; };
 		7D5D135F80E4A899C5442065F6114816 /* GPBUnknownFields.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GPBUnknownFields.m; path = objectivec/GPBUnknownFields.m; sourceTree = "<group>"; };
 		8248DD1F9FE5B8D62DE815E9FF3D8221 /* GPBTimestamp.pbobjc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBTimestamp.pbobjc.h; path = objectivec/GPBTimestamp.pbobjc.h; sourceTree = "<group>"; };
 		82792CD0D67FB996BBB0F1E8F35930BF /* GPBUnknownFields_PackagePrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBUnknownFields_PackagePrivate.h; path = objectivec/GPBUnknownFields_PackagePrivate.h; sourceTree = "<group>"; };
@@ -212,9 +213,9 @@
 		9BBB74D2DB38ECD1D5068685EDF01758 /* GPBDictionary.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBDictionary.h; path = objectivec/GPBDictionary.h; sourceTree = "<group>"; };
 		9BBD366F9637603C587AEC7CCA4215C9 /* GPBStruct.pbobjc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBStruct.pbobjc.h; path = objectivec/GPBStruct.pbobjc.h; sourceTree = "<group>"; };
 		9CA9DF546D596BABB061948F891F1EFA /* GPBArray_PackagePrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBArray_PackagePrivate.h; path = objectivec/GPBArray_PackagePrivate.h; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A0254285D6DDBB215E5A80A0CAE5BF45 /* GPBUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GPBUtilities.m; path = objectivec/GPBUtilities.m; sourceTree = "<group>"; };
-		A0947AC6F3A4757DEEFE366F74396916 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		A0947AC6F3A4757DEEFE366F74396916 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		A3288155B4BB556C828A99D14A02F2B7 /* GPBStruct.pbobjc.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GPBStruct.pbobjc.m; path = objectivec/GPBStruct.pbobjc.m; sourceTree = "<group>"; };
 		A3DE151D878D525D26D2C3ADC91068E3 /* GPBAny.pbobjc.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GPBAny.pbobjc.m; path = objectivec/GPBAny.pbobjc.m; sourceTree = "<group>"; };
 		A52831F627C13BE5AE9D254F2095A08C /* Pods-CastSender.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CastSender.release.xcconfig"; sourceTree = "<group>"; };
@@ -225,10 +226,10 @@
 		B1F500AEB473B53554C1C0ED23E079E1 /* GPBDescriptor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBDescriptor.h; path = objectivec/GPBDescriptor.h; sourceTree = "<group>"; };
 		B4C7A396E2870757DC92A05E5976B1F8 /* GPBUnknownFields.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBUnknownFields.h; path = objectivec/GPBUnknownFields.h; sourceTree = "<group>"; };
 		B6B9F90A19ED51046EA699E781AA9648 /* Pods-CastSender */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-CastSender"; path = Pods_CastSender.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B6E63CE0DD288AC8E69EDBA4F31DE9B7 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = "GoogleCast.xcframework/ios-arm64/GoogleCast.framework/PrivacyInfo.xcprivacy"; sourceTree = "<group>"; };
+		B6E63CE0DD288AC8E69EDBA4F31DE9B7 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = "GoogleCast.xcframework/ios-arm64/GoogleCast.framework/PrivacyInfo.xcprivacy"; sourceTree = "<group>"; };
 		B7979C90DAADBC7151F0F405BC2D5625 /* Type.pbobjc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Type.pbobjc.h; path = objectivec/google/protobuf/Type.pbobjc.h; sourceTree = "<group>"; };
 		C02766936146C1E9DDDC0AE9729CB866 /* GPBUnknownFieldSet_PackagePrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBUnknownFieldSet_PackagePrivate.h; path = objectivec/GPBUnknownFieldSet_PackagePrivate.h; sourceTree = "<group>"; };
-		C2105C94812B6214B154F54DCEDB72AC /* Protobuf */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Protobuf; path = Protobuf.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2105C94812B6214B154F54DCEDB72AC /* Protobuf.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Protobuf.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2EBE6882F3B9410CEC8DB2A260AEB86 /* GPBCodedOutputStream.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GPBCodedOutputStream.m; path = objectivec/GPBCodedOutputStream.m; sourceTree = "<group>"; };
 		C48E19BDA164154C305B3AFB8F4D1FAD /* google-cast-sdk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "google-cast-sdk.debug.xcconfig"; sourceTree = "<group>"; };
 		C585E5499AB32AC4EB312B95552FAE51 /* google-cast-sdk-GoogleCast */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "google-cast-sdk-GoogleCast"; path = GoogleCast.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -253,7 +254,7 @@
 		F25FD1A74226D68FA1A78DC72647A476 /* Protobuf-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Protobuf-Info.plist"; sourceTree = "<group>"; };
 		F345E27C02B9ED145EE0D51A0F579A9F /* GPBType.pbobjc.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GPBType.pbobjc.m; path = objectivec/GPBType.pbobjc.m; sourceTree = "<group>"; };
 		F76B4DC3C7E665E8F684292BA0BDC37A /* GPBDuration.pbobjc.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GPBDuration.pbobjc.m; path = objectivec/GPBDuration.pbobjc.m; sourceTree = "<group>"; };
-		F777222FFBEEB0CE4650EE8A00938A60 /* Protobuf-Protobuf_Privacy */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "Protobuf-Protobuf_Privacy"; path = Protobuf_Privacy.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		F777222FFBEEB0CE4650EE8A00938A60 /* Protobuf_Privacy.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Protobuf_Privacy.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC6C78E0D17AA033A2D9BF8387CA4532 /* GPBCodedInputStream.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBCodedInputStream.h; path = objectivec/GPBCodedInputStream.h; sourceTree = "<group>"; };
 		FD5869B75D8BD5354A6269C71D4B9F8B /* Pods-CastSender-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CastSender-dummy.m"; sourceTree = "<group>"; };
 		FD98AC111DF84E45E1D4F80BB2FE08F4 /* GPBWellKnownTypes.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GPBWellKnownTypes.m; path = objectivec/GPBWellKnownTypes.m; sourceTree = "<group>"; };
@@ -327,8 +328,8 @@
 			children = (
 				C585E5499AB32AC4EB312B95552FAE51 /* google-cast-sdk-GoogleCast */,
 				B6B9F90A19ED51046EA699E781AA9648 /* Pods-CastSender */,
-				C2105C94812B6214B154F54DCEDB72AC /* Protobuf */,
-				F777222FFBEEB0CE4650EE8A00938A60 /* Protobuf-Protobuf_Privacy */,
+				C2105C94812B6214B154F54DCEDB72AC /* Protobuf.framework */,
+				F777222FFBEEB0CE4650EE8A00938A60 /* Protobuf_Privacy.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -356,7 +357,6 @@
 				AF715FF5E533ECDB8A35C1A33A9A01FE /* Resources */,
 				EC0E5BCE454D78AAA6065D621A1ED0F5 /* Support Files */,
 			);
-			name = "google-cast-sdk";
 			path = "google-cast-sdk";
 			sourceTree = "<group>";
 		};
@@ -498,7 +498,6 @@
 				392ED18D5CF6F7848B312753C437C61E /* Resources */,
 				BFBD9C026509BE24CE53B49037A01D41 /* Support Files */,
 			);
-			name = Protobuf;
 			path = Protobuf;
 			sourceTree = "<group>";
 		};
@@ -608,7 +607,7 @@
 			);
 			name = "Protobuf-Protobuf_Privacy";
 			productName = Protobuf_Privacy;
-			productReference = F777222FFBEEB0CE4650EE8A00938A60 /* Protobuf-Protobuf_Privacy */;
+			productReference = F777222FFBEEB0CE4650EE8A00938A60 /* Protobuf_Privacy.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 		470FE31978DC918618A329D8B55C85FF /* Protobuf */ = {
@@ -627,7 +626,7 @@
 			);
 			name = Protobuf;
 			productName = Protobuf;
-			productReference = C2105C94812B6214B154F54DCEDB72AC /* Protobuf */;
+			productReference = C2105C94812B6214B154F54DCEDB72AC /* Protobuf.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		81DFD87445DC0F8EAA2871FB30A1C9B7 /* Pods-CastSender */ = {
@@ -719,7 +718,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				693C150F0E5CF14B08EC14DA35DA5806 /* Protobuf-Protobuf_Privacy in Resources */,
+				693C150F0E5CF14B08EC14DA35DA5806 /* Protobuf_Privacy.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -926,7 +925,7 @@
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Protobuf";
 				IBSC_MODULE = Protobuf;
 				INFOPLIST_FILE = "Target Support Files/Protobuf/ResourceBundle-Protobuf_Privacy-Protobuf-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				PRODUCT_NAME = Protobuf_Privacy;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -969,7 +968,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Protobuf/Protobuf-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Protobuf/Protobuf-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1133,7 +1132,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Protobuf/Protobuf-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Protobuf/Protobuf-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1214,7 +1213,7 @@
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Protobuf";
 				IBSC_MODULE = Protobuf;
 				INFOPLIST_FILE = "Target Support Files/Protobuf/ResourceBundle-Protobuf_Privacy-Protobuf-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				PRODUCT_NAME = Protobuf_Privacy;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
