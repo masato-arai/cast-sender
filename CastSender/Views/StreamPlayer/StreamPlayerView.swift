@@ -29,7 +29,7 @@ struct StreamPlayerView: View {
                     Image(systemName: isPlaying ? "pause.fill" : "play.fill")
                         .resizable()
                         .frame(width: 20, height: 20)
-                        .foregroundColor(.black)
+                        .foregroundColor(.primary)
                 }
             }
         }
