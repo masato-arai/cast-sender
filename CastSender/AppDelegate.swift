@@ -28,9 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.clipsToBounds = true
         setupCastLogging()
         
-//        // Enable logger.
-//        GCKLogger.sharedInstance().delegate = self
-//        print("Hello")
+        // Enable logger.
+        GCKLogger.sharedInstance().delegate = self
         return true
     }
 
