@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct StreamPlayerView: View {
-    @State private var streamPlayer = StreamPlayer()
+    let viewModel: ViewModel
+
     @State private var isPlaying = false
     @State private var isLoading = false
-    let ch1StreamURL = "https://stream-relay-geo.ntslive.net/stream"
 
     var body: some View {
         VStack {
@@ -20,9 +20,10 @@ struct StreamPlayerView: View {
             } else {
                 Button(action: {
                     if isPlaying {
-                        streamPlayer.pause()
+                        viewModel.pause()
                     } else {
-                        streamPlayer.play(urlString: ch1StreamURL)
+                        viewModel.play()
+                        viewModel.castLiveStream()
                     }
                     isPlaying.toggle()
                 }) {
@@ -36,6 +37,6 @@ struct StreamPlayerView: View {
     }
 }
 
-#Preview {
-    StreamPlayerView()
-}
+//#Preview {
+//    StreamPlayerView()
+//}

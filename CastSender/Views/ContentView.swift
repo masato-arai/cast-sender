@@ -7,7 +7,6 @@
 
 import SwiftUI
 import AVFoundation
-import GoogleCast
 
 struct ContentView: View {
     @StateObject var viewModel = ViewModel()
@@ -23,7 +22,7 @@ struct ContentView: View {
                         HStack(spacing: 20) {
                             Text("Ch\(broadcast.channel_name)")
                                 .font(.headline)
-                            StreamPlayerView()
+                            StreamPlayerView(viewModel: viewModel)
                         }
                     }
 
@@ -37,6 +36,6 @@ struct ContentView: View {
     }
 }
 
-#Preview {
-    ContentView()
-}
+//#Preview {
+//    ContentView()
+//}
