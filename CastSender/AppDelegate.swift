@@ -30,6 +30,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Enable logger.
         GCKLogger.sharedInstance().delegate = self
+
+        // Expanded controller
+        GCKCastContext.sharedInstance().useDefaultExpandedMediaControls = true
+
         return true
     }
 

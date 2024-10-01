@@ -62,6 +62,8 @@ class ViewModel: ObservableObject {
     }
 
     func castLiveStream() {
+        GCKCastContext.sharedInstance().presentDefaultExpandedMediaControls()
+
         metadata.setString("NTS Live Ch1", forKey: kGCKMetadataKeyTitle)
         metadata.setString(
             "NTS is a global radio platform broadcasting music from over 50 cities around the globe, live 24/7.",
@@ -93,6 +95,12 @@ class ViewModel: ObservableObject {
         mediaLoadRequestDataBuilder.mediaInformation = mediaInformation
         mediaLoadRequestDataBuilder.autoplay = true
 
-        sessionManager?.currentSession?.remoteMediaClient?.loadMedia(with: mediaLoadRequestDataBuilder.build())
+        guard let mediaInfo = mediaInformation else {
+            print("invalid mediaInformation")
+            return
+        }
+
+        // Load your media
+        sessionManager?.currentSession?.remoteMediaClient?.loadMedia(mediaInfo)
     }
 }
