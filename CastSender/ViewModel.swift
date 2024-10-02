@@ -14,7 +14,6 @@ class ViewModel: ObservableObject {
     @Published var isLoading = false
     @Published var data: [Broadcast]?
     @Published var errorMessage: String?
-    @Published var sessionManager: GCKSessionManager?
     @Published var metadata = GCKMediaMetadata()
     @State var streamPlayer = StreamPlayer()
 
@@ -101,6 +100,6 @@ class ViewModel: ObservableObject {
         }
 
         // Load your media
-        sessionManager?.currentSession?.remoteMediaClient?.loadMedia(mediaInfo)
+        GCKCastContext.sharedInstance().sessionManager.currentSession?.remoteMediaClient?.loadMedia(mediaInfo)
     }
 }
