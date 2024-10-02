@@ -19,7 +19,7 @@ class ViewModel: ObservableObject {
 
     let apiEndPoint = "https://www.nts.live/api/v2/live"
     let ch1StreamURL = "https://stream-relay-geo.ntslive.net/stream"
-    let mockImageUrl = "https://media.ntslive.co.uk/crop/1600x900/1cc2f6ce-adda-45ed-bcdd-f763100b88aa_1727654400.jpeg"
+    let mockImageUrl = "https://media.ntslive.co.uk/resize/1600x1600/70f4bd2c-38d0-4a2a-b067-fe2182af4e3a_1727827200.jpeg"
 
     init() {
         fetchData()
