@@ -68,13 +68,6 @@ class ViewModel: ObservableObject {
             "NTS is a global radio platform broadcasting music from over 50 cities around the globe, live 24/7.",
             forKey: kGCKMetadataKeySubtitle
         )
-        metadata.setString("Artist", forKey: kGCKMetadataKeyArtist)
-        metadata.setString("Album Artist", forKey: kGCKMetadataKeyAlbumArtist)
-        metadata.setString("Album Title", forKey: kGCKMetadataKeyAlbumTitle)
-        metadata.setString("Composer", forKey: kGCKMetadataKeyComposer)
-        metadata.setString("Series Title", forKey: kGCKMetadataKeySeriesTitle)
-        metadata.setString("Studio", forKey: kGCKMetadataKeyStudio)
-        metadata.setString("Location", forKey: kGCKMetadataKeyLocationName)
         metadata.addImage(
             GCKImage(
                 url: URL(string: mockImageUrl)!,
