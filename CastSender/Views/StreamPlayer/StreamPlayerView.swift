@@ -12,6 +12,10 @@ struct StreamPlayerView: View {
 
     @State private var isLoading = false
 
+    let title = "Sui Zhen - Lebanon Special"
+    let description = "Hour long explorations with Melbourne experimental pop producer & artist Sui Zhen."
+    let imageUrl = "https://media2.ntslive.co.uk/crop/750x750/25c55baf-af33-4c74-9480-1794fb003a33_1728259200.png"
+
     var body: some View {
         VStack {
             if isLoading {
@@ -22,6 +26,12 @@ struct StreamPlayerView: View {
                         viewModel.pauseLiveStream()
                     } else {
                         viewModel.playLiveStream()
+                        viewModel.castPlay(
+                            title: title,
+                            description: description,
+                            imageUrl: imageUrl,
+                            audioUrl: viewModel.ch1StreamURL
+                        )
                     }
                 }) {
                     Image(systemName: viewModel.currentPlayingChannel == .ch1 ? "pause.fill" : "play.fill")

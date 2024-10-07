@@ -27,7 +27,6 @@ class ViewModel: ObservableObject {
 
     let apiEndPoint = "https://www.nts.live/api/v2/live"
     let ch1StreamURL = "https://stream-relay-geo.ntslive.net/stream"
-    let mockImageUrl = "https://media.ntslive.co.uk/resize/1600x1600/70f4bd2c-38d0-4a2a-b067-fe2182af4e3a_1727827200.jpeg"
     let sampleAudioURL = "https://onlinetestcase.com/wp-content/uploads/2023/06/1-MB-MP3.mp3"
 
     init() {
@@ -89,24 +88,27 @@ class ViewModel: ObservableObject {
         updateCurrentPlayingChannel(newChannelType: .none)
     }
 
-    func castLiveStream() {
-        GCKCastContext.sharedInstance().presentDefaultExpandedMediaControls()
-
-        metadata.setString("NTS Live Ch1", forKey: kGCKMetadataKeyTitle)
+    func castPlay(
+        title: String,
+        description: String,
+        imageUrl: String,
+        audioUrl: String
+    ) {
+        metadata.setString(title, forKey: kGCKMetadataKeyTitle)
         metadata.setString(
-            "NTS is a global radio platform broadcasting music from over 50 cities around the globe, live 24/7.",
+            description,
             forKey: kGCKMetadataKeySubtitle
         )
         metadata.addImage(
             GCKImage(
-                url: URL(string: mockImageUrl)!,
-                width: 480,
-                height: 360
+                url: URL(string: imageUrl)!,
+                width: 750,
+                height: 750
             )
         )
 
         // prepare mediaInfromation to cast
-        let url = URL(string: sampleAudioURL)
+        let url = URL(string: audioUrl)
         guard let mediaURL = url else {
             print("invalid mediaURL")
             return
