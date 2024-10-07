@@ -100,6 +100,7 @@ class ViewModel: ObservableObject {
         }
 
         // Load your media
-        GCKCastContext.sharedInstance().sessionManager.currentSession?.remoteMediaClient?.loadMedia(mediaInfo)
+        let sessionManager = GCKCastContext.sharedInstance().sessionManager
+        sessionManager.currentSession?.remoteMediaClient?.loadMedia(mediaInfo)
     }
 }
