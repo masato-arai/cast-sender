@@ -19,22 +19,21 @@ struct ContentView: View {
                 VStack {
                     Spacer()
                     VStack(spacing: 96) {
-                        VStack {
-                            CastButtonView()
-                        }
-                        .frame(height: 48)
-
                         if let broadcast = data.first {
-                            VStack(spacing: 24) {
-                                Text("Ch\(broadcast.channel_name)")
+                            HStack(spacing: 24) {
+                                Text("LIVE NOW \(broadcast.channel_name)")
                                     .font(.headline)
                                 StreamPlayerView(viewModel: viewModel)
+                                CastButtonView()
+                                    .frame(width: 24, height: 24)
                             }
                         }
-                        VStack(spacing: 24) {
-                            Text("Archive Episode")
+                        HStack(spacing: 24) {
+                            Text("ARCHIVE")
                                 .font(.headline)
                             ArchivePlayerView(viewModel: viewModel)
+                            CastButtonView()
+                                .frame(width: 24, height: 24)
                         }
                     }
                     Spacer()

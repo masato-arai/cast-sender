@@ -65,7 +65,7 @@ class ViewModel: ObservableObject {
             archivePlayer.pause()
         }
 
-        streamPlayer.play(urlString: ch1StreamURL)
+//        streamPlayer.play(urlString: ch1StreamURL)
         updateCurrentPlayingChannel(newChannelType: .ch1)
     }
 
@@ -79,7 +79,7 @@ class ViewModel: ObservableObject {
             streamPlayer.pause()
         }
 
-        archivePlayer.play(urlString: sampleAudioURL)
+//        archivePlayer.play(urlString: sampleAudioURL)
         updateCurrentPlayingChannel(newChannelType: .archive)
     }
 
@@ -99,6 +99,7 @@ class ViewModel: ObservableObject {
             description,
             forKey: kGCKMetadataKeySubtitle
         )
+        metadata.removeAllMediaImages()
         metadata.addImage(
             GCKImage(
                 url: URL(string: imageUrl)!,
@@ -115,7 +116,14 @@ class ViewModel: ObservableObject {
         }
 
         let mediaInfoBuilder = GCKMediaInformationBuilder(contentURL: mediaURL)
-        mediaInfoBuilder.streamType = GCKMediaStreamType.live;
+        switch currentPlayingChannel {
+            case .ch1:
+                mediaInfoBuilder.streamType = .live
+            case .archive:
+                mediaInfoBuilder.streamType = .buffered
+            case .none:
+                mediaInfoBuilder.streamType = .none
+        }
         mediaInfoBuilder.contentType = "audio/mpeg"
         mediaInfoBuilder.metadata = metadata;
         var mediaInformation: GCKMediaInformation?
