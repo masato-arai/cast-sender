@@ -10,16 +10,25 @@ import Combine
 import GoogleCast
 import SwiftUI
 
+enum ChannelType: String, CaseIterable {
+    case ch1
+    case archive
+    case none
+}
+
 class ViewModel: ObservableObject {
     @Published var isLoading = false
     @Published var data: [Broadcast]?
     @Published var errorMessage: String?
     @Published var metadata = GCKMediaMetadata()
     @State var streamPlayer = StreamPlayer()
+    @State var archivePlayer = ArchivePlayer()
+    @Published var currentPlayingChannel: ChannelType = .none
 
     let apiEndPoint = "https://www.nts.live/api/v2/live"
     let ch1StreamURL = "https://stream-relay-geo.ntslive.net/stream"
     let mockImageUrl = "https://media.ntslive.co.uk/resize/1600x1600/70f4bd2c-38d0-4a2a-b067-fe2182af4e3a_1727827200.jpeg"
+    let sampleAudioURL = "https://onlinetestcase.com/wp-content/uploads/2023/06/1-MB-MP3.mp3"
 
     init() {
         fetchData()
@@ -52,12 +61,32 @@ class ViewModel: ObservableObject {
         }.resume()
     }
 
-    func play() {
+    func playLiveStream() {
+        if (currentPlayingChannel == .archive) {
+            archivePlayer.pause()
+        }
+
         streamPlayer.play(urlString: ch1StreamURL)
+        updateCurrentPlayingChannel(newChannelType: .ch1)
     }
 
-    func pause() {
+    func pauseLiveStream() {
         streamPlayer.pause()
+        updateCurrentPlayingChannel(newChannelType: .none)
+    }
+
+    func playArchiveStream() {
+        if (currentPlayingChannel == .ch1) {
+            streamPlayer.pause()
+        }
+
+        archivePlayer.play(urlString: sampleAudioURL)
+        updateCurrentPlayingChannel(newChannelType: .archive)
+    }
+
+    func pauseArchiveStream() {
+        archivePlayer.pause()
+        updateCurrentPlayingChannel(newChannelType: .none)
     }
 
     func castLiveStream() {
@@ -77,7 +106,7 @@ class ViewModel: ObservableObject {
         )
 
         // prepare mediaInfromation to cast
-        let url = URL(string: ch1StreamURL)
+        let url = URL(string: sampleAudioURL)
         guard let mediaURL = url else {
             print("invalid mediaURL")
             return
@@ -102,5 +131,9 @@ class ViewModel: ObservableObject {
         // Load your media
         let sessionManager = GCKCastContext.sharedInstance().sessionManager
         sessionManager.currentSession?.remoteMediaClient?.loadMedia(mediaInfo)
+    }
+
+    func updateCurrentPlayingChannel(newChannelType: ChannelType) {
+        currentPlayingChannel = newChannelType
     }
 }

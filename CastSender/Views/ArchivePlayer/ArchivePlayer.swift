@@ -1,14 +1,14 @@
 //
-//  StreamPlayer.swift
+//  ArchivePlayer.swift
 //  CastSender
 //
-//  Created by Masato Arai on 14/09/2024.
+//  Created by Masato Arai on 07/10/2024.
 //
 
 import SwiftUI
 import AVFoundation
 
-class StreamPlayer {
+class ArchivePlayer {
     var player: AVPlayer?
 
     func play(urlString: String) {

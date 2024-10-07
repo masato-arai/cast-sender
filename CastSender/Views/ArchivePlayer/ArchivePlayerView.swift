@@ -1,13 +1,13 @@
 //
-//  StreamPlayerView.swift
+//  ArchivePlayerView.swift
 //  CastSender
 //
-//  Created by Masato Arai on 15/09/2024.
+//  Created by Masato Arai on 07/10/2024.
 //
 
 import SwiftUI
 
-struct StreamPlayerView: View {
+struct ArchivePlayerView: View {
     @ObservedObject var viewModel: ViewModel
 
     @State private var isLoading = false
@@ -18,13 +18,13 @@ struct StreamPlayerView: View {
                 ProgressView().scaleEffect(2)
             } else {
                 Button(action: {
-                    if viewModel.currentPlayingChannel == .ch1 {
-                        viewModel.pauseLiveStream()
+                    if viewModel.currentPlayingChannel == .archive {
+                        viewModel.pauseArchiveStream()
                     } else {
-                        viewModel.playLiveStream()
+                        viewModel.playArchiveStream()
                     }
                 }) {
-                    Image(systemName: viewModel.currentPlayingChannel == .ch1 ? "pause.fill" : "play.fill")
+                    Image(systemName: viewModel.currentPlayingChannel == .archive ? "pause.fill" : "play.fill")
                         .resizable()
                         .frame(width: 20, height: 20)
                         .foregroundColor(.primary)

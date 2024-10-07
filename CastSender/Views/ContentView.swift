@@ -16,18 +16,28 @@ struct ContentView: View {
             if viewModel.isLoading {
                 ProgressView()
             } else if let data = viewModel.data {
-                HStack {
+                VStack {
+                    Spacer()
+                    VStack(spacing: 96) {
+                        VStack {
+                            CastButtonView()
+                        }
+                        .frame(height: 48)
 
-                    if let broadcast = data.first {
-                        HStack(spacing: 20) {
-                            Text("Ch\(broadcast.channel_name)")
+                        if let broadcast = data.first {
+                            VStack(spacing: 24) {
+                                Text("Ch\(broadcast.channel_name)")
+                                    .font(.headline)
+                                StreamPlayerView(viewModel: viewModel)
+                            }
+                        }
+                        VStack(spacing: 24) {
+                            Text("Archive Episode")
                                 .font(.headline)
-                            StreamPlayerView(viewModel: viewModel)
+                            ArchivePlayerView(viewModel: viewModel)
                         }
                     }
-
-                    CastButtonView()
-                        .frame(width: 100)
+                    Spacer()
                 }
             } else {
                 Text("Error fetching data")
@@ -35,7 +45,3 @@ struct ContentView: View {
         }
     }
 }
-
-//#Preview {
-//    ContentView()
-//}
